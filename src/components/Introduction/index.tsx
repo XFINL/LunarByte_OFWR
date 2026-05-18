@@ -33,7 +33,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="min-h-screen py-32 px-6 relative"
+      className="min-h-screen py-32 px-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <ScrollAnimator className="text-center mb-16">
@@ -75,7 +75,7 @@ export default function Introduction() {
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.01] rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] max-w-[100vw] max-h-[100vh] bg-white/[0.01] rounded-full blur-3xl"
         />
       </div>
     </section>

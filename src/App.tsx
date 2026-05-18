@@ -10,7 +10,7 @@ import OpenSource from './components/OpenSource';
 
 export default function App() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Navigation />
       <main>
         <Hero />

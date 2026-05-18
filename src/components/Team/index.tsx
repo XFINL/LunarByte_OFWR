@@ -8,7 +8,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="min-h-screen py-32 px-6 relative"
+      className="min-h-screen py-32 px-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <ScrollAnimator className="text-center mb-16">
@@ -65,7 +65,7 @@ export default function Team() {
       </div>
       
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-white/[0.01] rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-0 w-96 h-96 max-w-full max-h-full bg-white/[0.01] rounded-full blur-3xl" />
       </div>
     </section>
   );
