@@ -78,7 +78,7 @@ export default function OpenSource() {
               </p>
               
               <button
-                onClick={() => window.open('https://github.com/XFINL/LunarByte_OFWR', '_blank')}
+                onClick={() => window.open('https://github.com/XFINL/Lunarbyte_zero', '_blank')}
                 className="w-full px-6 py-4 rounded-xl bg-[var(--color-secondary)] text-black font-semibold flex items-center justify-center gap-3 hover:opacity-90 transition-opacity"
               >
                 <Github size={20} />

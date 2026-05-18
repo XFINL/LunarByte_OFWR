@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import ScrollAnimator from '../ScrollAnimator';
 import GlassCard from '../GlassCard';
-import { User } from 'lucide-react';
 
 export default function Team() {
   const { t } = useTranslation();
@@ -31,8 +30,12 @@ export default function Team() {
         
         <ScrollAnimator className="max-w-2xl mx-auto">
           <GlassCard className="p-12 text-center">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-[var(--color-glass-bg-hover)] flex items-center justify-center border-4 border-[var(--color-secondary)]">
-              <User size={64} className="text-[var(--color-secondary)]" />
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-[var(--color-secondary)]">
+              <img 
+                src="https://t.alcy.cc/moez" 
+                alt="XFIN Avatar" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-3xl font-bold mb-4">
               {t('team.members.xfin')}

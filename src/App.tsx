@@ -21,7 +21,7 @@ export default function App() {
       </main>
       <footer className="py-12 px-6 text-center">
         <p className="text-[var(--color-text-muted)] text-sm">
-          © 2024 LunarByte_Zero. All rights reserved.
+          © 2026 LunarByte. All rights reserved.
         </p>
       </footer>
     </div>
