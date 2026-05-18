@@ -35,7 +35,7 @@ export default function Download() {
   return (
     <section
       id="download"
-      className="min-h-screen py-32 px-6 relative"
+      className="min-h-screen py-32 px-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <ScrollAnimator className="text-center mb-16">
@@ -118,7 +118,7 @@ export default function Download() {
             opacity: [0.2, 0.4, 0.2],
           }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-white/[0.01] rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] max-w-[100vw] max-h-[100vh] bg-white/[0.01] rounded-full blur-3xl"
         />
       </div>
     </section>

@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 pt-20"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 pt-20 overflow-hidden"
     >
       <div className="text-center max-w-4xl mx-auto">
         <motion.div
@@ -82,9 +82,9 @@ export default function Hero() {
         </motion.div>
       </motion.button>
       
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl" />
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 max-w-full max-h-full bg-white/[0.02] rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 max-w-full max-h-full bg-white/[0.02] rounded-full blur-3xl" />
       </div>
     </section>
   );
