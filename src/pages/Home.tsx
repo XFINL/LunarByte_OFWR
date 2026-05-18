@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useAppStore } from '../store';
 import translations from '../translations';
 
@@ -8,6 +8,33 @@ const Home: React.FC = () => {
   const { language, setLanguage } = useAppStore();
   const t = translations[language];
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const sectionRefs = {
+    home: useRef<HTMLDivElement>(null),
+    download: useRef<HTMLDivElement>(null),
+    github: useRef<HTMLDivElement>(null)
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => new Set(prev).add(entry.target.id));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.values(sectionRefs).forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const isVisible = (id: string) => visibleSections.has(id);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
@@ -15,7 +42,7 @@ const Home: React.FC = () => {
         <div className="glass-strong rounded-3xl px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-              <span className="text-xl">♪</span>
+              <span className="text-xl font-bold">L</span>
             </div>
             <span className="text-xl font-bold tracking-wider">LunarByte_Zero</span>
           </div>
@@ -24,11 +51,11 @@ const Home: React.FC = () => {
             <a href="#home" className="text-gray-300 hover:text-white transition-colors">
               {t.nav.home}
             </a>
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">
-              {t.nav.features}
-            </a>
             <a href="#download" className="text-gray-300 hover:text-white transition-colors">
               {t.nav.download}
+            </a>
+            <a href="#github" className="text-gray-300 hover:text-white transition-colors">
+              GitHub
             </a>
           </div>
 
@@ -37,7 +64,7 @@ const Home: React.FC = () => {
               onClick={() => setIsLangOpen(!isLangOpen)}
               className="flex items-center gap-2 px-4 py-2 rounded-2xl glass hover:bg-white/10 transition-all"
             >
-              <span className="text-lg">🌐</span>
+              <span>Lang</span>
               <span>{t.langs[language]}</span>
               <span className={`text-sm transition-transform ${isLangOpen ? 'rotate-180' : ''}`}>▼</span>
             </button>
@@ -63,12 +90,16 @@ const Home: React.FC = () => {
       </nav>
 
       <main>
-        <section id="home" className="min-h-screen flex items-center justify-center pt-32 pb-20 px-4">
-          <div className="max-w-5xl w-full text-center animate-float">
-            <div className="glass-strong rounded-[3rem] p-12 md:p-20 animate-pulse-glow">
+        <section id="home" ref={sectionRefs.home} className="min-h-screen flex items-center justify-center pt-32 pb-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+            <div className="text-[20rem] font-bold select-none">L</div>
+          </div>
+          
+          <div className={`max-w-5xl w-full text-center transition-all duration-1000 ${isVisible('home') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <div className="glass-strong rounded-[3rem] p-12 md:p-20">
               <div className="mb-6">
                 <div className="w-24 h-24 mx-auto bg-white/10 rounded-3xl flex items-center justify-center">
-                  <span className="text-6xl">♪</span>
+                  <span className="text-6xl font-bold">L</span>
                 </div>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
@@ -84,67 +115,59 @@ const Home: React.FC = () => {
                 href="#download"
                 className="inline-flex items-center gap-2 px-10 py-4 bg-white text-black rounded-2xl font-semibold text-lg hover:bg-gray-200 transition-all hover:scale-105"
               >
-                <span>⬇</span>
-                {t.download.title}
+                Download Now
               </a>
             </div>
           </div>
         </section>
 
-        <section id="features" className="py-24 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-              {t.features.title}
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { icon: '🎵', title: t.features.feature1.title, desc: t.features.feature1.desc },
-                { icon: '🤖', title: t.features.feature2.title, desc: t.features.feature2.desc },
-                { icon: '✨', title: t.features.feature3.title, desc: t.features.feature3.desc }
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="glass rounded-3xl p-10 hover:glass-strong transition-all duration-500 hover:scale-105"
-                >
-                  <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center mb-6 hover:scale-110 transition-transform">
-                    <span className="text-4xl">{feature.icon}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="download" className="py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section id="download" ref={sectionRefs.download} className="py-24 px-4">
+          <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-200 ${isVisible('download') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-16">
               {t.download.title}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="glass-strong rounded-3xl p-10 hover:scale-105 transition-all duration-500 cursor-pointer">
                 <div className="w-24 h-24 rounded-2xl bg-green-500/20 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-5xl">🤖</span>
+                  <span className="text-5xl font-bold">A</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Android</h3>
                 <p className="text-gray-400 mb-6">{t.download.android}</p>
                 <button className="w-full py-4 bg-green-500 hover:bg-green-600 rounded-xl font-semibold text-lg transition-colors">
-                  <span className="mr-2">⬇</span>
                   {t.download.android}
                 </button>
               </div>
-              <div className="glass rounded-3xl p-10 opacity-70 cursor-not-allowed">
+              <div className="glass rounded-3xl p-10 opacity-70">
                 <div className="w-24 h-24 rounded-2xl bg-gray-500/20 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-5xl">💻</span>
+                  <span className="text-5xl font-bold">M</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Mac / Windows / iOS</h3>
                 <p className="text-gray-500 mb-6">{t.download.comingSoon}</p>
                 <button disabled className="w-full py-4 bg-gray-700 rounded-xl font-semibold text-lg cursor-not-allowed opacity-50">
-                  <span className="mr-2">⏳</span>
                   {t.download.comingSoon}
                 </button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="github" ref={sectionRefs.github} className="py-24 px-4">
+          <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-200 ${isVisible('github') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Open Source</h2>
+            <div className="glass-strong rounded-3xl p-12 hover:scale-105 transition-all duration-500">
+              <div className="w-24 h-24 rounded-2xl bg-gray-500/20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-5xl font-bold">G</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">GitHub Repository</h3>
+              <p className="text-gray-400 mb-8">View source code, contribute, or star the project</p>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-xl font-semibold text-lg hover:bg-gray-200 transition-all"
+              >
+                View on GitHub
+              </a>
             </div>
           </div>
         </section>
@@ -154,7 +177,7 @@ const Home: React.FC = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
             <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
-              <span className="text-xl">♪</span>
+              <span className="text-xl font-bold">L</span>
             </div>
             <span className="text-xl font-bold tracking-wider">LunarByte_Zero</span>
           </div>
