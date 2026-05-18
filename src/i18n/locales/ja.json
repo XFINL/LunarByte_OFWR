@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "intro": "紹介",
+    "team": "開発チーム",
+    "download": "ダウンロード",
+    "opensource": "オープンソース"
+  },
+  "hero": {
+    "title": "LunarByte_Zero",
+    "subtitle": "次世代スマートミュージック体験"
+  },
+  "intro": {
+    "title": "LunarByte_Zero について",
+    "description": "LunarByte_Zero は、音楽愛好家のために設計された革新的な音楽プレーヤーソフトウェアです。最も純粋で高音質な音楽体験を提供することに尽力し、すべての音符があなたの心に響くことを目指しています。最新のオーディオ処理技術を採用し、比類のないサウンド品質をお届けします。",
+    "features": {
+      "hd_audio": "高清オーディオ",
+      "hd_audio_desc": "ロスレスオーディオ形式をサポートし、最も自然な音を再現",
+      "smart_playlist": "スマートプレイリスト",
+      "smart_playlist_desc": "AI駆動のプレイリストレコメンデーションシステム",
+      "cross_platform": "クロスプラットフォーム同期",
+      "cross_platform_desc": "すべてのデバイスで音楽ライブラリをシームレスに同期",
+      "custom_ui": "カスタムインターフェース",
+      "custom_ui_desc": "豊かなテーマと外観カスタマイズオプション"
+    }
+  },
+  "team": {
+    "title": "開発チーム",
+    "description": "私たちは素晴らしい音楽ソフトウェアを作成することに情熱を注ぐ、国際的な開発チームです。",
+    "members": {
+      "lead_dev": "リード開発者",
+      "lead_dev_name": "Zero",
+      "designer": "UI/UX デザイナー",
+      "designer_name": "Luna",
+      "audio_eng": "オーディオエンジニア",
+      "audio_eng_name": "Byte",
+      "backend": "バックエンド開発者",
+      "backend_name": "Nova"
+    }
+  },
+  "download": {
+    "title": "LunarByte_Zero をダウンロード",
+    "subtitle": "プラットフォームを選択して音楽の旅を始めましょう",
+    "android": {
+      "name": "Android",
+      "status": "準備完了",
+      "version": "v1.0.0"
+    },
+    "mac": {
+      "name": "macOS",
+      "status": "開発中",
+      "version": "近日公開"
+    },
+    "windows": {
+      "name": "Windows",
+      "status": "開発中",
+      "version": "近日公開"
+    },
+    "ios": {
+      "name": "iOS",
+      "status": "開発中",
+      "version": "近日公開"
+    }
+  },
+  "opensource": {
+    "title": "オープンソースの詳細",
+    "subtitle": "オープンソースの力を信じています",
+    "description": "LunarByte_Zero の一部コアテクノロジーはオープンソース化されています。世界中の開発者の参加を歓迎し、音楽技術の発展を共に推進していきます。",
+    "tech_stack": "テクノロジー",
+    "tech_items": {
+      "frontend": "フロントエンドフレームワーク",
+      "frontend_value": "React 18 + TypeScript",
+      "styling": "スタイリング",
+      "styling_value": "Tailwind CSS",
+      "animation": "アニメーション",
+      "animation_value": "Framer Motion",
+      "i18n": "国際化",
+      "i18n_value": "i18next",
+      "build": "ビルドツール",
+      "build_value": "Vite"
+    },
+    "contribute": "寄稿する",
+    "contribute_desc": "コードの托管とコラボレーションにはGitHubを使用しています。IssueとPull Requestの提出を歓迎します。"
+  },
+  "footer": {
+    "copyright": "著作権",
+    "rights": "全著作権所有"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "首頁",
+    "intro": "軟體介紹",
+    "team": "開發團隊",
+    "download": "下載",
+    "opensource": "開源詳情"
+  },
+  "hero": {
+    "title": "LunarByte_Zero",
+    "subtitle": "新一代智能音樂體驗"
+  },
+  "intro": {
+    "title": "關於 LunarByte_Zero",
+    "description": "LunarByte_Zero 是一款專為音樂愛好者設計的創新音樂播放軟體。我們致力於提供最純淨、最高品質的音樂體驗，讓每一個音符都能觸動您的心靈。採用最新的音頻處理技術，為您呈現無與倫比的聲音品質。",
+    "features": {
+      "hd_audio": "高清音頻",
+      "hd_audio_desc": "支援無損音頻格式，还原最真實的聲音",
+      "smart_playlist": "智能播放列表",
+      "smart_playlist_desc": "AI 驅動的播放列表推薦系統",
+      "cross_platform": "跨平台同步",
+      "cross_platform_desc": "無縫同步您所有設備的音樂庫",
+      "custom_ui": "自訂介面",
+      "custom_ui_desc": "豐富的主題和外觀自訂選項"
+    }
+  },
+  "team": {
+    "title": "開發團隊",
+    "description": "我們是一支充滿熱情的跨國開發團隊，致力於打造卓越的音樂軟體。",
+    "members": {
+      "lead_dev": "首席開發",
+      "lead_dev_name": "Zero",
+      "designer": "UI/UX 設計師",
+      "designer_name": "Luna",
+      "audio_eng": "音頻工程師",
+      "audio_eng_name": "Byte",
+      "backend": "後端開發",
+      "backend_name": "Nova"
+    }
+  },
+  "download": {
+    "title": "下載 LunarByte_Zero",
+    "subtitle": "選擇您的平台開始音樂之旅",
+    "android": {
+      "name": "Android",
+      "status": "已就緒",
+      "version": "v1.0.0"
+    },
+    "mac": {
+      "name": "macOS",
+      "status": "開發中",
+      "version": "敬請期待"
+    },
+    "windows": {
+      "name": "Windows",
+      "status": "開發中",
+      "version": "敬請期待"
+    },
+    "ios": {
+      "name": "iOS",
+      "status": "開發中",
+      "version": "敬請期待"
+    }
+  },
+  "opensource": {
+    "title": "開源詳情",
+    "subtitle": "我們相信開源的力量",
+    "description": "LunarByte_Zero 的部分核心技術已經開源，我們歡迎全球開發者參與貢獻，共同推動音樂技術的發展。",
+    "tech_stack": "技術棧",
+    "tech_items": {
+      "frontend": "前端框架",
+      "frontend_value": "React 18 + TypeScript",
+      "styling": "樣式方案",
+      "styling_value": "Tailwind CSS",
+      "animation": "動畫引擎",
+      "animation_value": "Framer Motion",
+      "i18n": "國際化",
+      "i18n_value": "i18next",
+      "build": "構建工具",
+      "build_value": "Vite"
+    },
+    "contribute": "參與貢獻",
+    "contribute_desc": "我們使用 GitHub 進行代碼託管和協作，歡迎提交 Issue 和 Pull Request。"
+  },
+  "footer": {
+    "copyright": "版權所有",
+    "rights": "保留所有權利"
+  }
+}

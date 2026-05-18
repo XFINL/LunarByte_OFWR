@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "intro": "Introduction",
+    "team": "Team",
+    "download": "Download",
+    "opensource": "Open Source"
+  },
+  "hero": {
+    "title": "LunarByte_Zero",
+    "subtitle": "Next-Generation Intelligent Music Experience"
+  },
+  "intro": {
+    "title": "About LunarByte_Zero",
+    "description": "LunarByte_Zero is an innovative music player designed for music enthusiasts. We are committed to providing the purest, highest-quality music experience, allowing every note to touch your soul. Using the latest audio processing technology to present unparalleled sound quality.",
+    "features": {
+      "hd_audio": "High-Definition Audio",
+      "hd_audio_desc": "Supports lossless audio formats, restoring the most authentic sound",
+      "smart_playlist": "Smart Playlist",
+      "smart_playlist_desc": "AI-driven playlist recommendation system",
+      "cross_platform": "Cross-Platform Sync",
+      "cross_platform_desc": "Seamlessly sync your music library across all devices",
+      "custom_ui": "Custom Interface",
+      "custom_ui_desc": "Rich themes and appearance customization options"
+    }
+  },
+  "team": {
+    "title": "Development Team",
+    "description": "We are a passionate cross-national development team dedicated to creating excellent music software.",
+    "members": {
+      "lead_dev": "Lead Developer",
+      "lead_dev_name": "Zero",
+      "designer": "UI/UX Designer",
+      "designer_name": "Luna",
+      "audio_eng": "Audio Engineer",
+      "audio_eng_name": "Byte",
+      "backend": "Backend Developer",
+      "backend_name": "Nova"
+    }
+  },
+  "download": {
+    "title": "Download LunarByte_Zero",
+    "subtitle": "Choose your platform to start your music journey",
+    "android": {
+      "name": "Android",
+      "status": "Ready",
+      "version": "v1.0.0"
+    },
+    "mac": {
+      "name": "macOS",
+      "status": "In Development",
+      "version": "Coming Soon"
+    },
+    "windows": {
+      "name": "Windows",
+      "status": "In Development",
+      "version": "Coming Soon"
+    },
+    "ios": {
+      "name": "iOS",
+      "status": "In Development",
+      "version": "Coming Soon"
+    }
+  },
+  "opensource": {
+    "title": "Open Source Details",
+    "subtitle": "We believe in the power of open source",
+    "description": "Parts of LunarByte_Zero's core technology have been open-sourced. We welcome developers worldwide to contribute and jointly promote the development of music technology.",
+    "tech_stack": "Tech Stack",
+    "tech_items": {
+      "frontend": "Frontend Framework",
+      "frontend_value": "React 18 + TypeScript",
+      "styling": "Styling Solution",
+      "styling_value": "Tailwind CSS",
+      "animation": "Animation Engine",
+      "animation_value": "Framer Motion",
+      "i18n": "Internationalization",
+      "i18n_value": "i18next",
+      "build": "Build Tool",
+      "build_value": "Vite"
+    },
+    "contribute": "Contribute",
+    "contribute_desc": "We use GitHub for code hosting and collaboration. Welcome to submit Issues and Pull Requests."
+  },
+  "footer": {
+    "copyright": "Copyright",
+    "rights": "All Rights Reserved"
+  }
+}
