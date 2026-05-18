@@ -1,30 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import ScrollAnimator from '../ScrollAnimator';
 import GlassCard from '../GlassCard';
-import { Code, Palette, AudioLines, Server } from 'lucide-react';
-
-const teamMembers = [
-  {
-    roleKey: 'lead_dev',
-    nameKey: 'lead_dev_name',
-    icon: Code,
-  },
-  {
-    roleKey: 'designer',
-    nameKey: 'designer_name',
-    icon: Palette,
-  },
-  {
-    roleKey: 'audio_eng',
-    nameKey: 'audio_eng_name',
-    icon: AudioLines,
-  },
-  {
-    roleKey: 'backend',
-    nameKey: 'backend_name',
-    icon: Server,
-  },
-];
+import { User } from 'lucide-react';
 
 export default function Team() {
   const { t } = useTranslation();
@@ -39,28 +16,49 @@ export default function Team() {
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             {t('team.title')}
           </h2>
+          <div className="mb-4">
+            <span className="inline-block px-6 py-3 rounded-full glass text-xl font-semibold">
+              {t('team.group_name')}
+            </span>
+          </div>
           <p className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+            {t('team.company')}
+          </p>
+          <p className="text-base text-[var(--color-text-muted)] max-w-2xl mx-auto mt-2">
             {t('team.description')}
           </p>
         </ScrollAnimator>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
-            <ScrollAnimator key={member.roleKey} delay={index * 0.1}>
-              <GlassCard className="p-8 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[var(--color-glass-bg-hover)] flex items-center justify-center">
-                  <member.icon size={40} className="text-[var(--color-secondary)]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">
-                  {t(`team.members.${member.nameKey}`)}
-                </h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">
-                  {t(`team.members.${member.roleKey}`)}
-                </p>
-              </GlassCard>
-            </ScrollAnimator>
-          ))}
-        </div>
+        <ScrollAnimator className="max-w-2xl mx-auto">
+          <GlassCard className="p-12 text-center">
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-[var(--color-glass-bg-hover)] flex items-center justify-center border-4 border-[var(--color-secondary)]">
+              <User size={64} className="text-[var(--color-secondary)]" />
+            </div>
+            <h3 className="text-3xl font-bold mb-4">
+              {t('team.members.xfin')}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              <span className="px-4 py-2 rounded-full glass text-sm font-medium">
+                UI
+              </span>
+              <span className="px-4 py-2 rounded-full glass text-sm font-medium">
+                {t('nav.intro')}
+              </span>
+              <span className="px-4 py-2 rounded-full glass text-sm font-medium">
+                Backend
+              </span>
+              <span className="px-4 py-2 rounded-full glass text-sm font-medium">
+                Testing
+              </span>
+              <span className="px-4 py-2 rounded-full glass text-sm font-medium">
+                DevOps
+              </span>
+            </div>
+            <p className="text-[var(--color-text-secondary)]">
+              {t('team.members.xfin_role')}
+            </p>
+          </GlassCard>
+        </ScrollAnimator>
       </div>
       
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

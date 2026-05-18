@@ -26,16 +26,12 @@
   },
   "team": {
     "title": "Команда разработчиков",
-    "description": "Мы — страстная международная команда разработчиков, стремящаяся создавать отличное музыкальное программное обеспечение.",
+    "group_name": "Команда Moon",
+    "company": "Часть компании LunarByte",
+    "description": "Мы — страстная команда разработчиков, стремящаяся создавать отличное музыкальное программное обеспечение.",
     "members": {
-      "lead_dev": "Ведущий разработчик",
-      "lead_dev_name": "Zero",
-      "designer": "UI/UX дизайнер",
-      "designer_name": "Luna",
-      "audio_eng": "Звуковой инженер",
-      "audio_eng_name": "Byte",
-      "backend": "Backend разработчик",
-      "backend_name": "Nova"
+      "xfin": "XFIN",
+      "xfin_role": "UI / Frontend / Backend / Тестирование / DevOps"
     }
   },
   "download": {

@@ -26,16 +26,12 @@
   },
   "team": {
     "title": "開發團隊",
-    "description": "我們是一支充滿熱情的跨國開發團隊，致力於打造卓越的音樂軟體。",
+    "group_name": "Moon 小組",
+    "company": "隸屬於 LunarByte 公司",
+    "description": "我們是一支充滿熱情的開發團隊，致力於打造卓越的音樂軟體。",
     "members": {
-      "lead_dev": "首席開發",
-      "lead_dev_name": "Zero",
-      "designer": "UI/UX 設計師",
-      "designer_name": "Luna",
-      "audio_eng": "音頻工程師",
-      "audio_eng_name": "Byte",
-      "backend": "後端開發",
-      "backend_name": "Nova"
+      "xfin": "XFIN",
+      "xfin_role": "UI / 前端 / 後端 / 測試 / 運維"
     }
   },
   "download": {

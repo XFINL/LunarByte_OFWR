@@ -26,16 +26,12 @@
   },
   "team": {
     "title": "Development Team",
-    "description": "We are a passionate cross-national development team dedicated to creating excellent music software.",
+    "group_name": "Moon Team",
+    "company": "Part of LunarByte Company",
+    "description": "We are a passionate development team dedicated to creating excellent music software.",
     "members": {
-      "lead_dev": "Lead Developer",
-      "lead_dev_name": "Zero",
-      "designer": "UI/UX Designer",
-      "designer_name": "Luna",
-      "audio_eng": "Audio Engineer",
-      "audio_eng_name": "Byte",
-      "backend": "Backend Developer",
-      "backend_name": "Nova"
+      "xfin": "XFIN",
+      "xfin_role": "UI / Frontend / Backend / Testing / DevOps"
     }
   },
   "download": {

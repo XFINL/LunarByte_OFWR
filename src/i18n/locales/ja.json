@@ -26,16 +26,12 @@
   },
   "team": {
     "title": "開発チーム",
-    "description": "私たちは素晴らしい音楽ソフトウェアを作成することに情熱を注ぐ、国際的な開発チームです。",
+    "group_name": "Moon チーム",
+    "company": "LunarByte 社の部門",
+    "description": "私たちは素晴らしい音楽ソフトウェアを作成することに情熱を注ぐ、開発チームです。",
     "members": {
-      "lead_dev": "リード開発者",
-      "lead_dev_name": "Zero",
-      "designer": "UI/UX デザイナー",
-      "designer_name": "Luna",
-      "audio_eng": "オーディオエンジニア",
-      "audio_eng_name": "Byte",
-      "backend": "バックエンド開発者",
-      "backend_name": "Nova"
+      "xfin": "XFIN",
+      "xfin_role": "UI / フロントエンド / バックエンド / テスト / 運用"
     }
   },
   "download": {
