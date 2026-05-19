@@ -28,7 +28,7 @@ export default function Download() {
   
   const handleDownload = (platform: string) => {
     if (platform === 'android') {
-      window.open('https://github.com/XFINL/LunarByte_OFWR/releases', '_blank');
+      window.open('/downloads/Android/zero.apk', '_blank');
     }
   };
   
